@@ -7,7 +7,7 @@ url = 'http://127.0.0.1:5500/Esports%20World%20Cup%202024%20Player%20List%20-%20
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
-table = soup.find('table', {'class': 'sortable wikitable'})  # Adjust the class or ID to target the right table
+table = soup.find('table', {'class': 'sortable wikitable'}) 
 
 
 headers = [header.text.strip() for header in table.find_all('th')]
